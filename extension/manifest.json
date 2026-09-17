@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "UPC TV Direct Seek",
+  "version": "1.1.0",
+  "description": "Adds local direct-seek keyboard controls to the UPC TV web player.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://upctv.sk/*",
+        "https://*.upctv.sk/*"
+      ],
+      "js": ["seek.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    }
+  ]
+}
